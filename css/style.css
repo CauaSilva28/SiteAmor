@@ -1,0 +1,615 @@
+:root {
+  --red-darkest: #2b0303;
+  --red-dark: #4a0707;
+  --red-mid: #7a0c0c;
+  --red-bright: #c8102e;
+  --white: #ffffff;
+  --cream: #fbeee6;
+  --card-dark: rgba(20, 2, 2, 0.55);
+  --tan: #c9905e;
+  --tan-dark: #7a3b17;
+  --green-check: #3bbf6a;
+  --red-x: #e14b4b;
+
+  --font-title: 'Alex Brush', cursive;
+  --font-body: 'Poppins', sans-serif;
+
+  --max-width: 640px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(180deg, var(--red-darkest) 0%, var(--red-mid) 45%, var(--red-bright) 100%);
+  color: var(--white);
+  overflow-x: hidden;
+  position: relative;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- Fundo decorativo de corações ---------- */
+.heart-back{
+  display:flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height:100%;
+  opacity: 30%;
+}
+.heart-back img{
+  height:80%;
+  object-fit: cover;
+}
+
+section, footer, main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Tipografia comum ---------- */
+.section-title {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.lorem {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  max-width: var(--max-width);
+  margin: 14px auto;
+  padding: 0 24px;
+  text-align: left;
+}
+.lorem--wide {
+  text-align: center;
+}
+
+/* =========================================================
+   TELA DE ENTRADA (index.html)
+   ========================================================= */
+.gate-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.gate {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.gate-title {
+  font-family: var(--font-title);
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: var(--white);
+  margin: 0 0 40px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+.gate-photos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  min-height: 220px;
+}
+
+.gate-photos .polaroid {
+  width: 42%;
+  max-width: 220px;
+}
+.gate-photos .polaroid--left { transform: rotate(-6deg) translateY(6px); }
+.gate-photos .polaroid--right { transform: rotate(5deg) translateY(-6px); }
+
+.heart-deco {
+  position: absolute;
+  top:-40px;
+  right: 0;
+  font-size: 4rem;
+  color: var(--red-bright);
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+  rotate:20deg;
+}
+
+.gate-question { margin-bottom: 22px; }
+.gate-line1 { font-weight: 700; font-size: 1.15rem; margin: 0; }
+.gate-line2 { font-weight: 700; font-size: 1.15rem; margin: 4px 0; }
+.gate-hint { font-size: 0.85rem; opacity: 0.85; }
+
+.gate-form { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+.gate-input {
+  width: 100%;
+  max-width: 340px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid var(--white);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  padding: 14px 10px;
+  outline: none;
+}
+.gate-input::placeholder { color: rgba(255,255,255,0.5); }
+.gate-input:focus { border-bottom-color: var(--tan); }
+
+.gate-error {
+  color: #ffd3d3;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.shake { animation: shake 0.4s; }
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%,60% { transform: translateX(-8px); }
+  40%,80% { transform: translateX(8px); }
+}
+
+/* =========================================================
+   POLAROIDS — moldura feita com border, conforme pedido
+   ========================================================= */
+.polaroid {
+  background: var(--white);
+  border: 10px solid var(--white);
+  border-bottom: 34px solid var(--white);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  display: inline-block;
+}
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1px;
+}
+.polaroid--left  { transform: rotate(-4deg); }
+.polaroid--right { transform: rotate(4deg); }
+.polaroid--mid   { transform: rotate(-1deg); }
+
+.polaroid-pair {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: var(--max-width);
+}
+.polaroid-pair .polaroid { width: 42%; max-width: 190px; }
+
+/* =========================================================
+   HOME
+   ========================================================= */
+.site-home {
+  background-image: url(../assets/img/imgHome.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 100%;
+}
+.bgBlack{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+  background-image: linear-gradient(90deg, #000, transparent);
+  padding: 50px 24px 120px;
+}
+.title-names {
+  width:250px;
+}
+.site-tagline {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 14px;
+  width:60%;
+}
+.tag-pills { display: flex; justify-content: start; gap: 10px; flex-wrap: wrap; }
+.pill-white {
+  background: rgb(255, 255, 255);
+  color:#000;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  cursor:pointer;
+}
+.pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  cursor:pointer;
+}
+
+/* =========================================================
+   CARROSSEL DE FOTOS
+   ========================================================= */
+.fotos-swiper{
+  margin-top:-40px;
+  width:450px;
+  margin-bottom:40px;
+}
+
+.fotos-swiper .swiper-slide{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:50%;
+}
+
+.fotos-swiper .carousel-img{
+  width:200px;
+  border:5px solid var(--red-dark);
+}
+
+.fotos-swiper .deco-carousel{
+  top:-10px;
+  font-size: 3rem;
+}
+
+/* =========================================================
+   CONTADOR
+   ========================================================= */
+.counter-section {
+  text-align: center;
+  padding: 10px 24px 30px;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+.counter-unit { display: flex; flex-direction: column; align-items: center; min-width: 46px; }
+.counter-unit span { font-size: 1.5rem; }
+.counter-unit small { font-weight: 400; font-size: 0.8rem; opacity: 0.8; text-transform: lowercase; }
+
+/* =========================================================
+   BLOCO COM ÁUDIO
+   ========================================================= */
+.story-block {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 24px 10px;
+  text-align: center;
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 320px;
+  margin: 22px auto;
+  background: rgba(0,0,0,0.25);
+  border-radius: 999px;
+  padding: 8px 16px;
+}
+.audio-play-btn {
+  background: var(--white);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex: none;
+}
+.audio-play-btn svg { width: 16px; height: 16px; fill: var(--red-bright); }
+.audio-progress {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.audio-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--white);
+}
+
+/* =========================================================
+   TIMELINE — Nossos momentos
+   ========================================================= */
+.moments-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px 24px 10px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0 0 0 22px;
+  border-left: 2px solid rgba(255,255,255,0.35);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.15);
+}
+.timeline-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.timeline-content .lorem { padding: 0; margin: 0 0 14px; }
+.timeline-content .polaroid-pair { margin: 0; justify-content: flex-start; }
+.timeline-content .polaroid-pair .polaroid { max-width: 130px; }
+
+.continua {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 30px 0 0;
+}
+
+/* =========================================================
+   FAIXAS "EU TE AMO"
+   ========================================================= */
+.love-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 30px 0;
+}
+.love-photo {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.love-photo img { width: 100%; height: 100%; object-fit: cover; }
+.love-caption {
+  position: absolute;
+  bottom: 16px;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+.love-caption--left { left: 20px; }
+.love-caption--right { right: 20px; }
+
+/* =========================================================
+   LISTA DE SONHOS
+   ========================================================= */
+.wishlist-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 24px 10px;
+  text-align: center;
+}
+.wishlist-instructions {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 6px 0;
+}
+.wishlist-legend {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin: 0 0 20px;
+}
+.legend-check { color: var(--green-check); font-weight: 700; }
+.legend-x { color: var(--red-x); font-weight: 700; }
+
+.wishlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wish-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card-dark);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: left;
+}
+.wish-heart {
+  background: none;
+  border: none;
+  color: var(--red-x);
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+  flex: none;
+  transition: transform 0.15s ease;
+}
+.wish-heart:active { transform: scale(1.2); }
+.wish-text {
+  flex: 1;
+  font-size: 0.88rem;
+}
+.wish-status {
+  flex: none;
+  font-weight: 700;
+  color: var(--red-x);
+}
+
+.wish-item[data-done="true"] .wish-heart { color: var(--red-bright); }
+.wish-item[data-done="true"] .wish-status { color: var(--green-check); }
+.wish-item[data-done="true"] .wish-text { opacity: 0.75; text-decoration: line-through; }
+
+/* =========================================================
+   TRIO DE POLAROIDS
+   ========================================================= */
+.polaroid-trio {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 30px 24px;
+}
+.polaroid-trio .polaroid { width: 28%; max-width: 150px; }
+
+/* =========================================================
+   PROMESSAS
+   ========================================================= */
+.promises-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 24px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.promise-box {
+  background: var(--tan);
+  color: var(--tan-dark);
+  border-radius: 14px;
+  padding: 18px 20px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.promise-box p:first-child {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 6px;
+}
+.promise-box p { margin: 2px 0; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  text-align: center;
+  padding: 1px;
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  background-color: #000;
+}
+
+/* =========================================================
+   RESPONSIVO — VERSÃO WEB (desktop)
+   ========================================================= */
+@media (min-width: 900px) {
+  :root { --max-width: 1000px; }
+
+  .gate-title { font-size: 4.6rem; }
+  .gate-photos { min-height: 320px; }
+  .gate-photos .polaroid { max-width: 300px; }
+
+  .site-tagline { font-size: 1rem; max-width: 640px; }
+
+  .hero-carousel { gap: 40px; }
+  .carousel-slot { max-width: 260px; }
+
+  .counter { gap: 30px; }
+  .counter-unit span { font-size: 2rem; }
+
+  .story-block { padding-top: 40px; }
+  .polaroid-pair .polaroid { max-width: 260px; }
+  .lorem { font-size: 1rem; }
+
+  /* Timeline alternando lados no desktop */
+  .moments-section { max-width: 900px; }
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255,255,255,0.35);
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    width: 46%;
+    padding-bottom: 60px;
+  }
+  .timeline-item:nth-child(odd) {
+    margin-right: 54%;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    margin-left: 54%;
+  }
+  .timeline-item:nth-child(odd) .polaroid-pair { justify-content: flex-end; }
+  .timeline-item:nth-child(odd) .lorem { text-align: right; }
+  .timeline-dot {
+    left: auto;
+    right: -33px;
+    top: 4px;
+  }
+  .timeline-item:nth-child(even) .timeline-dot { left: -33px; right: auto; }
+
+  /* Faixas EU TE AMO lado a lado */
+  .love-strip { flex-direction: row; gap: 6px; }
+  .love-photo { aspect-ratio: 1 / 1.1; }
+  .love-caption { font-size: 2.4rem; }
+
+  /* Wishlist em duas colunas */
+  .wishlist-section { max-width: 900px; }
+  .wishlist {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .wish-item { width: calc(50% - 6px); }
+
+  .polaroid-trio .polaroid { max-width: 220px; }
+
+  .promises-section {
+    flex-direction: row;
+    max-width: 900px;
+  }
+  .promise-box { flex: 1; }
+}

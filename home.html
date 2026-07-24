@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+<body>
+
+<!-- ===================== HOME ===================== -->
+<section class="site-home">
+  <div class="bgBlack">
+    <img class="title-names" src="assets/img/nomesHome.png" />
+    <p class="site-tagline">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text
+    </p>
+    <div class="tag-pills">
+      <span class="pill-white">Lorem Ipsum &#9825;</span>
+      <span class="pill">Lorem Ipsum &#9825;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CARROSEL DE FOTOS ===================== -->
+<section class="swiper fotos-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro1.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro2.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro1.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro2.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro1.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="swiper-slide">
+        <img class="carousel-img" src="assets/img/imgDiaNamoro2.jpg">
+        <span class="heart-deco deco-carousel" aria-hidden="true">&#10084;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTADOR ===================== -->
+<section class="counter-section">
+  <h2 class="section-title">Juntos oficialmente há:</h2>
+  <div id="counter" class="counter" data-start="2026-05-16T16:30:00">
+    <div class="counter-unit"><span id="c-months">0</span><small>meses</small></div>
+    <div class="counter-unit"><span id="c-days">0</span><small>dias</small></div>
+    <div class="counter-unit"><span id="c-hours">0</span><small>hrs</small></div>
+    <div class="counter-unit"><span id="c-minutes">0</span><small>min</small></div>
+    <div class="counter-unit"><span id="c-seconds">0</span><small>seg</small></div>
+  </div>
+</section>
+
+<!-- ===================== BLOCO COM ÁUDIO ===================== -->
+<section class="story-block">
+  <h2 class="section-title">Título aqui &#9825;</h2>
+  <p class="lorem">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text
+  </p>
+
+  <div class="polaroid-pair">
+    <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+    <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  </div>
+
+  <!-- Player de áudio simples. Basta adicionar o src do arquivo de música. -->
+  <div class="audio-player" data-audio-player>
+    <button class="audio-play-btn" type="button" aria-label="Tocar música">
+      <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="icon-pause" hidden viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <div class="audio-progress">
+      <div class="audio-progress-fill"></div>
+    </div>
+    <audio preload="metadata">
+      <!-- TROQUE pelo caminho da música, ex: <source src="assets/audio/nossa-musica.mp3" type="audio/mpeg"> -->
+    </audio>
+  </div>
+
+  <p class="lorem">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text
+  </p>
+</section>
+
+<!-- ===================== NOSSOS MOMENTOS (TIMELINE) ===================== -->
+<section class="moments-section">
+  <h2 class="section-title">Nossos momentos &#9825;</h2>
+
+  <ol class="timeline">
+    <li class="timeline-item">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div class="timeline-content">
+        <h3 class="timeline-title">Título aqui</h3>
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text
+        </p>
+        <div class="polaroid-pair">
+          <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+          <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+        </div>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div class="timeline-content">
+        <h3 class="timeline-title">Título aqui</h3>
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text
+        </p>
+        <div class="polaroid-pair">
+          <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+          <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+        </div>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div class="timeline-content">
+        <h3 class="timeline-title">Título aqui</h3>
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text
+        </p>
+        <div class="polaroid-pair">
+          <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+          <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Para adicionar mais momentos, copie um <li class="timeline-item"> inteiro e cole aqui -->
+  </ol>
+
+  <p class="continua">Continua...</p>
+</section>
+
+<!-- ===================== FAIXAS "EU TE AMO" ===================== -->
+<section class="love-strip">
+  <figure class="love-photo">
+    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
+    <figcaption class="love-caption love-caption--right">Eu te amo</figcaption>
+  </figure>
+  <figure class="love-photo">
+    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
+    <figcaption class="love-caption love-caption--left">Eu te amo</figcaption>
+  </figure>
+  <figure class="love-photo">
+    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
+    <figcaption class="love-caption love-caption--right">Eu te amo</figcaption>
+  </figure>
+</section>
+
+<p class="lorem lorem--wide">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text.
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text
+</p>
+
+<!-- ===================== LISTA DE SONHOS ===================== -->
+<section class="wishlist-section">
+  <h2 class="section-title">Lista de sonhos a realizarmos &#9825;</h2>
+  <p class="wishlist-instructions">Marcar como realizado clicando no coração!</p>
+  <p class="wishlist-legend">
+    <span class="legend-check">&#10003;</span> = Realizados &nbsp;&nbsp;
+    <span class="legend-x">&#10005;</span> = Ainda não
+  </p>
+
+  <ul class="wishlist" id="wishlist">
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <li class="wish-item" data-done="false">
+      <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
+      <span class="wish-text">Lorem Ipsum is simply dummy text</span>
+      <span class="wish-status">&#10005;</span>
+    </li>
+    <!-- Para adicionar mais sonhos, copie um <li class="wish-item"> inteiro e cole aqui -->
+  </ul>
+</section>
+
+<!-- ===================== MAIS FOTOS ===================== -->
+<section class="polaroid-trio">
+  <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  <div class="polaroid polaroid--mid"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+</section>
+
+<p class="lorem lorem--wide">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text.
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text
+</p>
+
+<!-- ===================== PROMESSAS / TRECHO DE MÚSICA ===================== -->
+<section class="promises-section">
+  <!-- Espaço pensado para um trecho de letra de música especial de vocês, ou uma promessa escrita por você -->
+  <div class="promise-box">
+    <p>Nossas promessas</p>
+    <p>Lorem Ipsum is simply dummy text of the printing industry</p>
+    <p>Lorem Ipsum has been the standard dummy text ever since</p>
+    <p>Lorem Ipsum is simply dummy text of the typesetting industry</p>
+    <p>Lorem Ipsum, baby, para sempre</p>
+  </div>
+  <div class="promise-box">
+    <p>Nossas promessas</p>
+    <p>Lorem Ipsum is simply dummy text of the printing industry</p>
+    <p>Lorem Ipsum has been the standard dummy text ever since</p>
+    <p>Lorem Ipsum is simply dummy text of the typesetting industry</p>
+    <p>Lorem Ipsum, baby, para sempre</p>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <p>&#9825; Para todo sempre eu vou te amar! &#9825;</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<script src="js/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu amor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gate-body">
+  <div class="heart-back"><img src="assets/img/coracoesFundo.png"></div>
+
+  <main class="gate">
+    <h1 class="gate-title">Cauã e Vithória</h1>
+
+    <div class="gate-photos">
+      <!-- TROQUE src pelas fotos reais do casal -->
+      <div class="polaroid polaroid--left">
+        <img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal 1">
+      </div>
+      <div class="polaroid polaroid--right">
+        <img src="assets/img/imgDiaNamoro2.jpg" alt="Foto do casal 2">
+      </div>
+      <span class="heart-deco" aria-hidden="true">&#10084;</span>
+    </div>
+
+    <div class="gate-question">
+      <p class="gate-line1">Para entrar me diga:</p>
+      <p class="gate-line2">Qual a data do nosso dia?</p>
+      <span class="gate-hint">(DDMMAAAA)</span>
+    </div>
+
+    <form id="gate-form" class="gate-form" autocomplete="off">
+      <input
+        type="text"
+        id="date-input"
+        class="gate-input"
+        inputmode="numeric"
+        maxlength="8"
+        placeholder="Escreva aqui"
+        aria-label="Data no formato dia mês ano"
+        required
+      >
+      <p id="gate-error" class="gate-error" hidden>Errou a data do nosso dia... &#128557;</p>
+    </form>
+  </main>
+
+  <script src="js/gate.js"></script>
+</body>
+</html>
