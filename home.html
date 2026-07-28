@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<div class="hearts-bg" aria-hidden="true"></div>
+
 <!-- ===================== HOME ===================== -->
 <section class="site-home">
   <div class="bgBlack">
@@ -90,13 +92,15 @@
   <div class="audio-player" data-audio-player>
     <button class="audio-play-btn" type="button" aria-label="Tocar música">
       <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      <svg class="icon-pause" hidden viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
     </button>
-    <div class="audio-progress">
-      <div class="audio-progress-fill"></div>
+    <div class="audio-progress" data-audio-progress>
+      <div class="audio-progress-fill">
+        <span class="audio-progress-heart" aria-hidden="true">&#10084;</span>
+      </div>
     </div>
     <audio preload="metadata">
-      <!-- TROQUE pelo caminho da música, ex: <source src="assets/audio/nossa-musica.mp3" type="audio/mpeg"> -->
+      <source src="assets/audio/nossa-musica.mp3" type="audio/mpeg">
     </audio>
   </div>
 
@@ -164,18 +168,37 @@
 
 <!-- ===================== FAIXAS "EU TE AMO" ===================== -->
 <section class="love-strip">
-  <figure class="love-photo">
-    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
-    <figcaption class="love-caption love-caption--right">Eu te amo</figcaption>
-  </figure>
-  <figure class="love-photo">
-    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
-    <figcaption class="love-caption love-caption--left">Eu te amo</figcaption>
-  </figure>
-  <figure class="love-photo">
-    <img src="assets/img/imgHome.jpg" alt="Foto do casal">
-    <figcaption class="love-caption love-caption--right">Eu te amo</figcaption>
-  </figure>
+  <div class="love-photo" style="background-image: url(assets/img/imgHome.jpg);">
+    <div class="love-bg love-caption-right">
+      <span class="love-caption">Eu te amo</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+  </div>
+
+  <div class="love-photo" style="background-image: url(assets/img/imgHome.jpg);">
+    <div class="love-bg love-caption-left">
+      <span class="love-caption">Eu te amo</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+  </div>
+
+  <div class="love-photo" style="background-image: url(assets/img/imgHome.jpg);">
+    <div class="love-bg love-caption-right">
+      <span class="love-caption">Eu te amo</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+  </div>
+
+  <div class="love-photo" style="background-image: url(assets/img/imgHome.jpg);">
+    <div class="love-bg love-caption-left">
+      <span class="love-caption">Eu te amo</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text.</p>
+    </div>
+  </div>
 </section>
 
 <p class="lorem lorem--wide">

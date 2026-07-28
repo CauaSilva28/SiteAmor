@@ -68,38 +68,80 @@ const swiper = new Swiper('.fotos-swiper', {
 
 
 /* -------------------- 3. PLAYER DE ÁUDIO -------------------- */
-// Funciona automaticamente assim que você adicionar o <source src="..."> no HTML
 document.querySelectorAll('[data-audio-player]').forEach((player) => {
   const btn = player.querySelector('.audio-play-btn');
   const audio = player.querySelector('audio');
   const iconPlay = player.querySelector('.icon-play');
   const iconPause = player.querySelector('.icon-pause');
+  const progress = player.querySelector('[data-audio-progress]');
   const fill = player.querySelector('.audio-progress-fill');
 
-  btn.addEventListener('click', () => {
-    if (!audio.src) return; // nenhuma música adicionada ainda
+  let isDragging = false;
 
+  btn.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
-      iconPlay.hidden = true;
-      iconPause.hidden = false;
+      iconPlay.style.display = "none";
+      iconPause.style.display = "block";
     } else {
       audio.pause();
-      iconPlay.hidden = false;
-      iconPause.hidden = true;
+      iconPlay.style.display = "block";
+      iconPause.style.display = "none";
     }
   });
 
   audio.addEventListener('timeupdate', () => {
-    if (!audio.duration) return;
+    if (isDragging || !audio.duration) return;
     fill.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
   });
 
   audio.addEventListener('ended', () => {
-    iconPlay.hidden = false;
-    iconPause.hidden = true;
+    iconPlay.style.display = "block";
+    iconPause.style.display = "none";
     fill.style.width = '0%';
   });
+
+  // ---- Barra manipulável: clicar ou arrastar move a música ----
+  function ratioFromEvent(clientX) {
+    const rect = progress.getBoundingClientRect();
+    const raw = (clientX - rect.left) / rect.width;
+    return Math.min(1, Math.max(0, raw));
+  }
+
+  function applyRatio(ratio, { seek } = { seek: true }) {
+    fill.style.width = `${ratio * 100}%`;
+    if (seek && audio.duration) {
+      audio.currentTime = ratio * audio.duration;
+    }
+  }
+
+  function startDrag(clientX) {
+    if (!audio.duration) return;
+    isDragging = true;
+    player.classList.add('is-dragging');
+    applyRatio(ratioFromEvent(clientX));
+  }
+
+  function moveDrag(clientX) {
+    if (!isDragging) return;
+    applyRatio(ratioFromEvent(clientX));
+  }
+
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    player.classList.remove('is-dragging');
+  }
+
+  // Mouse
+  progress.addEventListener('mousedown', (e) => startDrag(e.clientX));
+  window.addEventListener('mousemove', (e) => moveDrag(e.clientX));
+  window.addEventListener('mouseup', endDrag);
+
+  // Toque (celular)
+  progress.addEventListener('touchstart', (e) => startDrag(e.touches[0].clientX), { passive: true });
+  progress.addEventListener('touchmove', (e) => moveDrag(e.touches[0].clientX), { passive: true });
+  progress.addEventListener('touchend', endDrag);
 });
 
 
