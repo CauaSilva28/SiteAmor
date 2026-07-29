@@ -6,8 +6,7 @@
   --white: #ffffff;
   --cream: #fbeee6;
   --card-dark: rgba(20, 2, 2, 0.55);
-  --tan: #c9905e;
-  --tan-dark: #7a3b17;
+  --tan: #2e2e2e;
   --green-check: #3bbf6a;
   --red-x: #e14b4b;
 
@@ -56,7 +55,7 @@ img { max-width: 100%; display: block; }
   }
 }
 
-section, footer, main {
+section, footer, main, .lorem {
   position: relative;
   z-index: 1;
 }
@@ -553,27 +552,42 @@ section, footer, main {
 }
 .promise-box {
   background: var(--tan);
-  color: var(--tan-dark);
+  color: var(--cream);
   border-radius: 14px;
-  padding: 18px 20px;
+  padding:30px;
   font-size: 0.82rem;
   line-height: 1.6;
   font-weight: 600;
 }
-.promise-box p:first-child {
+.promise-box h3 {
+  color:var(--red-bright);
   font-family: var(--font-title);
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 400;
-  margin: 0 0 6px;
+  margin:0 0 20px 0;
+  line-height: 40px;
 }
-.promise-box p { margin: 2px 0; }
+.promise-box .letter-box{
+  background-color: #202020;
+  margin:30px auto;
+  width:70%;
+  padding:15px;
+  border-radius:1em;
+  border:3px solid var(--red-bright);
+  box-shadow:4px 4px 15px #000;
+}
+.promise-box .letter-box p{
+  font-size:1rem;
+  color:var(--cream);
+  margin:5px 0;
+}
 
 /* =========================================================
    FOOTER
    ========================================================= */
 .site-footer {
   text-align: center;
-  padding: 1px;
+  padding: 1px 15px;
   font-family: var(--font-title);
   font-size: 1.6rem;
   background-color: #000;
@@ -647,11 +661,11 @@ section, footer, main {
 
   /*Faixas eu te amo*/
   .love-strip{
-    margin:0 400px;
+    margin:0 200px;
   }
   .love-photo{
     height:500px;
-    background-position: center;
+    background-position-y: 20%;
   }
 
   /* Wishlist em duas colunas */

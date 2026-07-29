@@ -1,7 +1,4 @@
-// ============================================================
-// Página principal — contador em tempo real, carrossel de fotos,
-// player de áudio simples e interação da lista de sonhos
-// ============================================================
+AOS.init();
 
 /* -------------------- 1. CONTADOR REAL -------------------- */
 // Data/hora de início lida do atributo data-start do HTML

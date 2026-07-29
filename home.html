@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 <!-- ===================== HOME ===================== -->
 <section class="site-home">
   <div class="bgBlack">
-    <img class="title-names" src="assets/img/nomesHome.png" />
+    <img data-aos="zoom-in-right" data-aos-duration="1000" class="title-names" src="assets/img/nomesHome.png" />
     <p class="site-tagline">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text
@@ -84,11 +85,10 @@
   </p>
 
   <div class="polaroid-pair">
-    <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
-    <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+    <div data-aos="zoom-in-left" data-aos-duration="1000" class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+    <div data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200" class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
   </div>
 
-  <!-- Player de áudio simples. Basta adicionar o src do arquivo de música. -->
   <div class="audio-player" data-audio-player>
     <button class="audio-play-btn" type="button" aria-label="Tocar música">
       <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -117,7 +117,7 @@
   <ol class="timeline">
     <li class="timeline-item">
       <span class="timeline-dot" aria-hidden="true"></span>
-      <div class="timeline-content">
+      <div data-aos="fade-right" data-aos-duration="1000" class="timeline-content">
         <h3 class="timeline-title">Título aqui</h3>
         <p class="lorem">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -132,7 +132,7 @@
 
     <li class="timeline-item">
       <span class="timeline-dot" aria-hidden="true"></span>
-      <div class="timeline-content">
+      <div data-aos="fade-right" data-aos-duration="1000" class="timeline-content">
         <h3 class="timeline-title">Título aqui</h3>
         <p class="lorem">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -147,7 +147,7 @@
 
     <li class="timeline-item">
       <span class="timeline-dot" aria-hidden="true"></span>
-      <div class="timeline-content">
+      <div data-aos="fade-right" data-aos-duration="1000" class="timeline-content">
         <h3 class="timeline-title">Título aqui</h3>
         <p class="lorem">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -160,7 +160,35 @@
       </div>
     </li>
 
-    <!-- Para adicionar mais momentos, copie um <li class="timeline-item"> inteiro e cole aqui -->
+    <li class="timeline-item">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div data-aos="fade-right" data-aos-duration="1000" class="timeline-content">
+        <h3 class="timeline-title">Título aqui</h3>
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text
+        </p>
+        <div class="polaroid-pair">
+          <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+          <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+        </div>
+      </div>
+    </li>
+
+    <li class="timeline-item">
+      <span class="timeline-dot" aria-hidden="true"></span>
+      <div data-aos="fade-right" data-aos-duration="1000" class="timeline-content">
+        <h3 class="timeline-title">Título aqui</h3>
+        <p class="lorem">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text
+        </p>
+        <div class="polaroid-pair">
+          <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+          <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Momento do casal"></div>
+        </div>
+      </div>
+    </li>
   </ol>
 
   <p class="continua">Continua...</p>
@@ -218,32 +246,32 @@
   </p>
 
   <ul class="wishlist" id="wishlist">
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
     </li>
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
     </li>
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
     </li>
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
     </li>
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
     </li>
-    <li class="wish-item" data-done="false">
+    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750" class="wish-item" data-done="false">
       <button class="wish-heart" type="button" aria-label="Marcar como realizado">&#9825;</button>
       <span class="wish-text">Lorem Ipsum is simply dummy text</span>
       <span class="wish-status">&#10005;</span>
@@ -254,9 +282,9 @@
 
 <!-- ===================== MAIS FOTOS ===================== -->
 <section class="polaroid-trio">
-  <div class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
-  <div class="polaroid polaroid--mid"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
-  <div class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  <div data-aos="zoom-in-right" data-aos-duration="1000" class="polaroid polaroid--left"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" class="polaroid polaroid--mid"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
+  <div data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="250" class="polaroid polaroid--right"><img src="assets/img/imgDiaNamoro1.jpg" alt="Foto do casal"></div>
 </section>
 
 <p class="lorem lorem--wide">
@@ -270,27 +298,63 @@
 <section class="promises-section">
   <!-- Espaço pensado para um trecho de letra de música especial de vocês, ou uma promessa escrita por você -->
   <div class="promise-box">
-    <p>Nossas promessas</p>
-    <p>Lorem Ipsum is simply dummy text of the printing industry</p>
-    <p>Lorem Ipsum has been the standard dummy text ever since</p>
-    <p>Lorem Ipsum is simply dummy text of the typesetting industry</p>
-    <p>Lorem Ipsum, baby, para sempre</p>
+    <h3>Eu prometo para todo sempre te amar</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+    <div class="letter-box">
+      <p>Tenho você por perto</p>
+      <p>Nunca me senti tão completo</p>
+      <p>Nunca me senti tão seguro</p>
+      <p>Perco o medo do fim do mundo</p>
+    </div>
+    <div class="audio-player" data-audio-player>
+      <button class="audio-play-btn" type="button" aria-label="Tocar música">
+        <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+      <div class="audio-progress" data-audio-progress>
+        <div class="audio-progress-fill">
+          <span class="audio-progress-heart" aria-hidden="true">&#10084;</span>
+        </div>
+      </div>
+      <audio preload="metadata">
+        <source src="assets/audio/planos.mp3" type="audio/mpeg">
+      </audio>
+    </div>
   </div>
+
   <div class="promise-box">
-    <p>Nossas promessas</p>
-    <p>Lorem Ipsum is simply dummy text of the printing industry</p>
-    <p>Lorem Ipsum has been the standard dummy text ever since</p>
-    <p>Lorem Ipsum is simply dummy text of the typesetting industry</p>
-    <p>Lorem Ipsum, baby, para sempre</p>
+    <h3>Eu prometo te fazer a mulher mais feliz do mundo</h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+    <div class="letter-box">
+      <p>Com você</p>
+      <p>Eu sonho de olho aberto, bb</p>
+      <p>Quero amar</p>
+      <p>E sempre ver de perto você</p>
+    </div>
+    <div class="audio-player" data-audio-player>
+      <button class="audio-play-btn" type="button" aria-label="Tocar música">
+        <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+      <div class="audio-progress" data-audio-progress>
+        <div class="audio-progress-fill">
+          <span class="audio-progress-heart" aria-hidden="true">&#10084;</span>
+        </div>
+      </div>
+      <audio preload="metadata">
+        <source src="assets/audio/bb.mp3" type="audio/mpeg">
+      </audio>
+    </div>
   </div>
 </section>
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
-  <p>&#9825; Para todo sempre eu vou te amar! &#9825;</p>
+  <p>&#9825; Origado por ser tão incrível! Sou o mais sortudo desse mundo por te ter, te amo hoje e sempre! &#9825;</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script src="js/home.js"></script>
 
