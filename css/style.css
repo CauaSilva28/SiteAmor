@@ -239,6 +239,12 @@ section, footer, main, .lorem {
   margin: 0 0 14px;
   width:60%;
 }
+.tag-pills a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .tag-pills { display: flex; justify-content: start; gap: 10px; flex-wrap: wrap; }
 .pill-white {
   background: rgb(255, 255, 255);
@@ -256,6 +262,45 @@ section, footer, main, .lorem {
   font-size: 0.75rem;
   cursor:pointer;
 }
+
+/* =========================================================
+   TELA QUE APARECE AO CLICAR BOTAO HOME
+   ========================================================= */
+   .screen-love-bg{
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #00000096;
+    backdrop-filter: blur(4px);
+    display:none;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .screen-love{
+    width:350px;
+    background-image: linear-gradient(40deg, var(--red-mid), var(--red-bright));
+    border-radius:1em;
+    box-shadow: 2px 2px 8px #000;
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+   }
+   .screen-love h1{
+    margin:0;
+    padding: 0;
+    font-family: var(--font-title);
+    font-size:3.5em;
+   }
+   .screen-love button{
+    padding:10px;
+    border:none;
+    border-radius:2em;
+    width: 100%;
+   }
 
 /* =========================================================
    CARROSSEL DE FOTOS
@@ -384,7 +429,7 @@ section, footer, main, .lorem {
 /* =========================================================
    TIMELINE — Nossos momentos
    ========================================================= */
-.moments-section {
+#moments-section {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 30px 24px 10px;
@@ -551,7 +596,7 @@ section, footer, main, .lorem {
   margin: 0 auto;
 }
 .promise-box {
-  background: var(--tan);
+  background-image: linear-gradient(#000, var(--tan));
   color: var(--cream);
   border-radius: 14px;
   padding:30px;
@@ -623,7 +668,7 @@ section, footer, main, .lorem {
   }
 
   /* Timeline alternando lados no desktop */
-  .moments-section { max-width: 900px; }
+  #moments-section { max-width: 900px; }
   .timeline {
     border-left: none;
     padding-left: 0;
