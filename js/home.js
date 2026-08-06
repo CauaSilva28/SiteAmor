@@ -1,5 +1,16 @@
 AOS.init();
 
+function openScreen(){
+  let screen = document.querySelector(".screen-love-bg");
+
+  screen.style.display = "flex";
+}
+function closeScreen(){
+  let screen = document.querySelector(".screen-love-bg");
+
+  screen.style.display = "none";
+}
+
 /* -------------------- 1. CONTADOR REAL -------------------- */
 // Data/hora de início lida do atributo data-start do HTML
 const counterEl = document.getElementById('counter');

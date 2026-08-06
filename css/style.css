@@ -300,6 +300,7 @@ section, footer, main, .lorem {
     border:none;
     border-radius:2em;
     width: 100%;
+    cursor:pointer;
    }
 
 /* =========================================================
